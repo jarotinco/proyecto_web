@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>PREMIO MANUALES</h1>
+<div class="table-responsive-lg">
+<table class="table w-auto">
+  <thead class="thead-dark">
+    <tr>
+      <th>N° formato</th>
+      <th>Fecha</th>
+      <th>Maquina</th>
+      <th>Valor</th>
+      <th>Contador inicial</th>
+      <th>Contador final</th>
+      <th>DNI</th>
+      <th>NomCliente</th>
+      <th>ApePaterno</th>
+      <th>ApeMaterno</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @premio_manuals.each do |premio_manual| %>
+      <tr>
+        <td><%= premio_manual.nformato %></td>
+        <td><%= premio_manual.fecha %></td>
+        <td><%= premio_manual.maquina %></td>
+        <td><%= premio_manual.valor %></td>
+        <td><%= premio_manual.coninicial %></td>
+        <td><%= premio_manual.confinal %></td>
+        <td><%= premio_manual.dni %></td>
+        <td><%= premio_manual.nomcliente %></td>
+        <td><%= premio_manual.apepaterno %></td>
+        <td><%= premio_manual.apematerno %></td>
+        <td class="btn btn-light"><%= link_to 'Mostrar', premio_manual %></td>
+        <td class="btn btn-light"><%= link_to 'Editar', edit_premio_manual_path(premio_manual) %></td>
+        <td class="btn btn-light"><%= link_to 'Eliminar', premio_manual, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
+<button type="button" class="btn-outline-dark"><%= link_to 'Nuevo', new_premio_manual_path %></button>

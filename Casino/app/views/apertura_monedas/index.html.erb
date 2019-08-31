@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Apertura Monedas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecham</th>
+      <th>Horam</th>
+      <th>Nromaquinam</th>
+      <th>Valorm</th>
+      <th>Monedaf</th>
+      <th>Totalm</th>
+      <th>Totalfm</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @apertura_monedas.each do |apertura_moneda| %>
+      <tr>
+        <td><%= apertura_moneda.fecham %></td>
+        <td><%= apertura_moneda.horam %></td>
+        <td><%= apertura_moneda.nromaquinam %></td>
+        <td><%= apertura_moneda.valorm %></td>
+        <td><%= apertura_moneda.monedaf %></td>
+        <td><%= apertura_moneda.totalm %></td>
+        <td><%= apertura_moneda.totalfm %></td>
+        <td><%= link_to 'Show', apertura_moneda %></td>
+        <td><%= link_to 'Edit', edit_apertura_moneda_path(apertura_moneda) %></td>
+        <td><%= link_to 'Destroy', apertura_moneda, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Apertura Moneda', new_apertura_moneda_path %>

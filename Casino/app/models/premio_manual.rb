@@ -1,0 +1,2 @@
+class PremioManual < ApplicationRecord
+end

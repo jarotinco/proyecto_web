@@ -1,0 +1,2 @@
+module RecaudacionsHelper
+end

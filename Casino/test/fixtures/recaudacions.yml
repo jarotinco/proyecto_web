@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fechar: 2019-08-30
+  horar: 2019-08-30 02:35:47
+  nromaquinar: 1
+  rellenoini: 9.99
+  valorr: 9.99
+  monedafr: 1
+  rellenofin: 9.99
+  totalr: 9.99
+  totalfr: 1
+
+two:
+  fechar: 2019-08-30
+  horar: 2019-08-30 02:35:47
+  nromaquinar: 1
+  rellenoini: 9.99
+  valorr: 9.99
+  monedafr: 1
+  rellenofin: 9.99
+  totalr: 9.99
+  totalfr: 1

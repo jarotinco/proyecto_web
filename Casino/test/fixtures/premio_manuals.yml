@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nformato: 1
+  fecha: 2019-08-30
+  maquina: MyString
+  valor: 9.99
+  coninicial: 9.99
+  confinal: 9.99
+  dni: 1
+  nomcliente: MyString
+  apepaterno: MyString
+  apematerno: MyString
+
+two:
+  nformato: 1
+  fecha: 2019-08-30
+  maquina: MyString
+  valor: 9.99
+  coninicial: 9.99
+  confinal: 9.99
+  dni: 1
+  nomcliente: MyString
+  apepaterno: MyString
+  apematerno: MyString

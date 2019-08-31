@@ -1,0 +1,56 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>N° formato:</strong>
+  <%= @premio_manual.nformato %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @premio_manual.fecha %>
+</p>
+
+<p>
+  <strong>Maquina:</strong>
+  <%= @premio_manual.maquina %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @premio_manual.valor %>
+</p>
+
+<p>
+  <strong>Contador inicial:</strong>
+  <%= @premio_manual.coninicial %>
+</p>
+
+<p>
+  <strong>Contador final:</strong>
+  <%= @premio_manual.confinal %>
+</p>
+
+<p>
+  <strong>DNI:</strong>
+  <%= @premio_manual.dni %>
+</p>
+
+<p>
+  <strong>Nombre cliente:</strong>
+  <%= @premio_manual.nomcliente %>
+</p>
+
+<p>
+  <strong>Apellido paterno:</strong>
+  <%= @premio_manual.apepaterno %>
+</p>
+
+<p>
+  <strong>Apellido materno:</strong>
+  <%= @premio_manual.apematerno %>
+</p>
+
+<%= link_to 'Editar', edit_premio_manual_path(@premio_manual) %> |
+<%= link_to 'Atras', premio_manuals_path %>
+</div>

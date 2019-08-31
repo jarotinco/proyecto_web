@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Apertura Billetes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fechab</th>
+      <th>Hora</th>
+      <th>Nromaquina</th>
+      <th>Valorb</th>
+      <th>Billetef</th>
+      <th>Totalb</th>
+      <th>Totalf</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @apertura_billetes.each do |apertura_billete| %>
+      <tr>
+        <td><%= apertura_billete.fechab %></td>
+        <td><%= apertura_billete.hora %></td>
+        <td><%= apertura_billete.nromaquina %></td>
+        <td><%= apertura_billete.valorb %></td>
+        <td><%= apertura_billete.billetef %></td>
+        <td><%= apertura_billete.totalb %></td>
+        <td><%= apertura_billete.totalf %></td>
+        <td><%= link_to 'Show', apertura_billete %></td>
+        <td><%= link_to 'Edit', edit_apertura_billete_path(apertura_billete) %></td>
+        <td><%= link_to 'Destroy', apertura_billete, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Apertura Billete', new_apertura_billete_path %>

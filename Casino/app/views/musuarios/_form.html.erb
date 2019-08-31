@@ -1,0 +1,47 @@
+<%= form_with(model: musuario, local: true) do |form| %>
+  <% if musuario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(musuario.errors.count, "error") %> prohibited this musuario from being saved:</h2>
+
+      <ul>
+      <% musuario.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :musuario_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :apellidos %>
+    <%= form.text_field :apellidos, id: :musuario_apellidos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :usuario %>
+    <%= form.text_field :usuario, id: :musuario_usuario %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.text_field :password, id: :musuario_password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sala %>
+    <%= form.text_field :sala, id: :musuario_sala %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo %>
+    <%= form.text_field :tipo, id: :musuario_tipo %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Recaudacions</h1>
+
+<table class="table w-auto">
+  <thead class="thead-dark">
+    <tr>
+      <th>Fechar</th>
+      <th>Horar</th>
+      <th>Nromaquinar</th>
+      <th>Rellenoini</th>
+      <th>Valorr</th>
+      <th>Monedafr</th>
+      <th>Rellenofin</th>
+      <th>Totalr</th>
+      <th>Totalfr</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recaudacions.each do |recaudacion| %>
+      <tr>
+        <td><%= recaudacion.fechar %></td>
+        <td><%= recaudacion.horar %></td>
+        <td><%= recaudacion.nromaquinar %></td>
+        <td><%= recaudacion.rellenoini %></td>
+        <td><%= recaudacion.valorr %></td>
+        <td><%= recaudacion.monedafr %></td>
+        <td><%= recaudacion.rellenofin %></td>
+        <td><%= recaudacion.totalr %></td>
+        <td><%= recaudacion.totalfr %></td>
+        <td><%= link_to 'Show', recaudacion %></td>
+        <td><%= link_to 'Edit', edit_recaudacion_path(recaudacion) %></td>
+        <td><%= link_to 'Destroy', recaudacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recaudacion', new_recaudacion_path %>

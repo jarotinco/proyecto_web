@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecham: 2019-08-30
+  horam: 2019-08-30 01:25:38
+  nromaquinam: 1
+  valorm: 9.99
+  monedaf: 1
+  totalm: 9.99
+  totalfm: 1
+
+two:
+  fecham: 2019-08-30
+  horam: 2019-08-30 01:25:38
+  nromaquinam: 1
+  valorm: 9.99
+  monedaf: 1
+  totalm: 9.99
+  totalfm: 1

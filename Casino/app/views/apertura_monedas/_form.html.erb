@@ -1,0 +1,52 @@
+<%= form_with(model: apertura_moneda, local: true) do |form| %>
+  <% if apertura_moneda.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(apertura_moneda.errors.count, "error") %> prohibited this apertura_moneda from being saved:</h2>
+
+      <ul>
+      <% apertura_moneda.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :fecham %>
+    <%= form.date_select :fecham, id: :apertura_moneda_fecham %>
+  </div>
+
+  <div class="field">
+    <%= form.label :horam %>
+    <%= form.datetime_select :horam, id: :apertura_moneda_horam %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nromaquinam %>
+    <%= form.number_field :nromaquinam, id: :apertura_moneda_nromaquinam %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valorm %>
+    <%= form.text_field :valorm, id: :apertura_moneda_valorm %>
+  </div>
+
+  <div class="field">
+    <%= form.label :monedaf %>
+    <%= form.number_field :monedaf, id: :apertura_moneda_monedaf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :totalm %>
+    <%= form.text_field :totalm, id: :apertura_moneda_totalm %>
+  </div>
+
+  <div class="field">
+    <%= form.label :totalfm %>
+    <%= form.number_field :totalfm, id: :apertura_moneda_totalfm %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

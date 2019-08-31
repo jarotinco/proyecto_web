@@ -1,0 +1,2 @@
+class AperturaBillete < ApplicationRecord
+end

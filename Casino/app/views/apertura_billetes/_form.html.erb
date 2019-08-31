@@ -1,0 +1,52 @@
+<%= form_with(model: apertura_billete, local: true) do |form| %>
+  <% if apertura_billete.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(apertura_billete.errors.count, "error") %> prohibited this apertura_billete from being saved:</h2>
+
+      <ul>
+      <% apertura_billete.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :fechab %>
+    <%= form.date_select :fechab, id: :apertura_billete_fechab %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hora %>
+    <%= form.datetime_select :hora, id: :apertura_billete_hora %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nromaquina %>
+    <%= form.number_field :nromaquina, id: :apertura_billete_nromaquina %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valorb %>
+    <%= form.text_field :valorb, id: :apertura_billete_valorb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :billetef %>
+    <%= form.number_field :billetef, id: :apertura_billete_billetef %>
+  </div>
+
+  <div class="field">
+    <%= form.label :totalb %>
+    <%= form.text_field :totalb, id: :apertura_billete_totalb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :totalf %>
+    <%= form.number_field :totalf, id: :apertura_billete_totalf %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

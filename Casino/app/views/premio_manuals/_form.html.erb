@@ -1,0 +1,93 @@
+<%= form_with(model: premio_manual, local: true) do |form| %>
+  <% if premio_manual.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(premio_manual.errors.count, "error") %> prohibited this premio_manual from being saved:</h2>
+
+      <ul>
+      <% premio_manual.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   
+
+  <form class="needs-validation" novalidate>
+  <div class="form-row">
+    <div class="col-md-4 mb-3"> 
+      <%= form.label :'N° Formato' %>
+      <%= form.text_field :nformato, id: :premio_manual_nformato %>                 
+    </div>
+    <div class="col-md-4 mb-3">      
+      <%= form.label :'Fecha' %>
+      <%= form.date_select :fecha, id: :premio_manual_fecha %>     
+    </div>    
+
+  <div class="row">
+    <div class="offset-4 col-3">
+      <%= form.submit%>
+    </div>
+  </div>
+
+  </div>
+  
+  
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <%= form.label :'N° Maquina' %>
+      <%= form.text_field :maquina,{ :class => "form-control", :placeholder => "Ingrese número de maquina"}%>
+    </div>  
+     <div class="col-md-4 mb-3">
+      <%= form.label :Valor %>
+      <%= form.text_field :valor,{ :class => "form-control", :placeholder => "Ingrese valor"}%>
+    </div>   
+  </div>
+
+    <div class="form-row">
+    <div class="col-md-4 mb-3">
+       <%= form.label :'Contador Inicial' %>
+       <%= form.text_field :coninicial,{ :class => "form-control", :placeholder => "Ingrese contador inicial"} %>
+    </div>  
+     <div class="col-md-4 mb-3">
+      <%= form.label :'Contador Final' %>
+       <%= form.text_field :confinal,{ :class => "form-control", :placeholder => "Ingrese contador final"} %>
+    </div>   
+  </div>
+
+   <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <%= form.label :DNI %>
+      <%= form.number_field :dni, { :class => "form-control", :placeholder => "Ingrese DNI"}%>
+    </div>  
+    <div class="col-md-4 mb-3">
+      <%= form.label :'Nombre Cliente' %>
+      <%= form.text_field :nomcliente,{ :class => "form-control", :placeholder => "Nombre cliente"}%>
+    </div>   
+  </div>
+
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+     <%= form.label :'Apellido Paterno' %>
+    <%= form.text_field :apepaterno,{ :class => "form-control", :placeholder => "Ingrese apellido paterno"}%>
+    </div>  
+    <div class="col-md-4 mb-3">
+     <%= form.label :'Apellido Materno' %>
+    <%= form.text_field :apematerno,{ :class => "form-control", :placeholder => "Ingrese apellido materno"} %>
+    </div> 
+
+    <div class="form-row">  
+       <div class="col-md-4 mb-1">
+          
+       </div>    
+     </div> 
+
+  
+
+
+  </div>
+
+    
+
+  </form>
+<% end %>

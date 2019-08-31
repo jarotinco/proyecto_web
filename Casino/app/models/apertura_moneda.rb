@@ -1,0 +1,2 @@
+class AperturaMoneda < ApplicationRecord
+end

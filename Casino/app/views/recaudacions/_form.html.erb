@@ -1,0 +1,62 @@
+<%= form_with(model: recaudacion, local: true) do |form| %>
+  <% if recaudacion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(recaudacion.errors.count, "error") %> prohibited this recaudacion from being saved:</h2>
+
+      <ul>
+      <% recaudacion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :fechar %>
+    <%= form.date_select :fechar, id: :recaudacion_fechar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :horar %>
+    <%= form.datetime_select :horar, id: :recaudacion_horar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nromaquinar %>
+    <%= form.number_field :nromaquinar, id: :recaudacion_nromaquinar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rellenoini %>
+    <%= form.text_field :rellenoini, id: :recaudacion_rellenoini %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valorr %>
+    <%= form.text_field :valorr, id: :recaudacion_valorr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :monedafr %>
+    <%= form.number_field :monedafr, id: :recaudacion_monedafr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rellenofin %>
+    <%= form.text_field :rellenofin, id: :recaudacion_rellenofin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :totalr %>
+    <%= form.text_field :totalr, id: :recaudacion_totalr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :totalfr %>
+    <%= form.number_field :totalfr, id: :recaudacion_totalfr %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
